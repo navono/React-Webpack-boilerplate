@@ -10,7 +10,7 @@ module.exports = {
   devtool: "source-map",
   entry: [
     path.resolve(__dirname, './src/index.js'),
-      // 'webpack/hot/dev-server',
+    // 'webpack/hot/dev-server',
     `webpack-dev-server/client?http://localhost:${PORT}`
   ],
   output: {
