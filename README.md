@@ -1,1 +1,1 @@
-A sample use react and react-redux to demostrate async data flow.
+Just for test, not production. Still continues Improvement
