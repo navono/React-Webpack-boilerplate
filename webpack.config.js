@@ -55,7 +55,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Reddit',
+      title: 'Demo',
       template: path.resolve(__dirname, './index.html'),
     }),
     new webpack.HotModuleReplacementPlugin(),
