@@ -23,6 +23,33 @@ module.exports = {
         test: /\.js$/,
         use: 'babel-loader',
         exclude: /(node_modules)/
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader', 
+          'css-loader', 
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [require('autoprefixer')]
+            }
+          }
+        ]
+      },
+      {
+        test: /\.scss/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [require('autoprefixer')]
+            }
+          }, 
+          'sass-loader'
+        ]
       }
     ]
   },
@@ -40,6 +67,7 @@ module.exports = {
     historyApiFallback: true,
     // 告诉 dev-server 在使用HMR
     hot: true,
+    contentBase: path.resolve(__dirname, './build'),
     port: PORT,
   }
 }
