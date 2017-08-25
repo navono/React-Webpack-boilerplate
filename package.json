@@ -16,6 +16,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "css-loader": "^0.28.5",
     "html-webpack-plugin": "^2.29.0",
     "open-browser-webpack-plugin": "^0.0.5",
     "postcss-loader": "^2.0.6",
