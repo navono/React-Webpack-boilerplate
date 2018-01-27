@@ -13,11 +13,11 @@ export default class Counter extends React.Component {
         <input
           type='button'
           value='increament' 
-          onClick={this.props.increase} />
+          onClick={this.props.onIncrease} />
         <input
           type='button'
           value='decrement'
-          onClick={this.props.decrease} />
+          onClick={this.props.onDecrease} />
       </div>
     );
   }
