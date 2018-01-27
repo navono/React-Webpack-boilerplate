@@ -1,13 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import Counter from './Counter';
 
 export default class App extends React.Component {
   render() {
     return (
-      <div>
-        <p>Hello, World!</p>
-        <input type='button' value='click me' />
-      </div>
+      <Counter />
     );
   }
 }

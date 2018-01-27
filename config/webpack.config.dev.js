@@ -19,7 +19,7 @@ module.exports = merge(commonConfig, {
   },
 
   entry: [
-    // 'react-hot-loader/patch',
+    "react-hot-loader/patch",
     `webpack-dev-server/client?http://localhost:${PORT}/`,
     // dev-server: 遇到错误会重新刷新浏览器
     // only-dev-server: 遇到错误不会重新刷新浏览器，React App推荐使用。因为不会重置状态
