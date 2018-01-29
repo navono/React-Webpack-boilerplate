@@ -9,12 +9,14 @@ export default class Counter extends React.Component {
     return (
       <div>
         <p>Hello, World! I'm counting...</p>
-        <p>{this.props.count}</p>
+        <p id='count'>{this.props.count}</p>
         <input
+          className='button'
           type='button'
           value='increament' 
           onClick={this.props.onIncrease} />
         <input
+          className='button'
           type='button'
           value='decrement'
           onClick={this.props.onDecrease} />
