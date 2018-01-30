@@ -11,9 +11,7 @@ const render = Component => {
   ReactDOM.render(
     <Provider store={store}>
       <AppContainer>
-        
         <Component />
-        
       </AppContainer>
       </Provider>,
     document.getElementById('root')

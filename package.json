@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config ./config/webpack.config.dev.js --progress --profile --colors",
     "build": "webpack --config ./config/webpack.config.prod.js --progress --profile --colors",
-    "test": "jest --setupFiles ./enzyme.config.js",
+    "test": "cross-env NODE_ENV=production jest --setupFiles ./enzyme.config.js",
     "precommit": "lint-staged"
   },
   "lint-staged": {
@@ -30,6 +30,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "clean-webpack-plugin": "^0.1.17",
+    "cross-env": "^5.1.3",
     "css-loader": "^0.28.9",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
