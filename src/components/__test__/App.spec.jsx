@@ -1,8 +1,8 @@
 import React from 'react';
 import { Provider } from "react-redux";
 import { mount } from 'enzyme';
-import App from './App';
-import configureStore from "../store";
+import App from '../App';
+import configureStore from "../../store";
 
 function setup(initialState) {
   const store = configureStore(initialState);

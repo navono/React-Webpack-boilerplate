@@ -1,7 +1,7 @@
 import React from 'react';
 import { spy } from 'sinon';
 import { shallow } from 'enzyme';
-import Counter from './Counter';
+import Counter from '../Counter';
 
 function setup() {
   const actions = {

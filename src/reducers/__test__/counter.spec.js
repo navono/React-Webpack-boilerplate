@@ -1,5 +1,5 @@
-import counter from "./counter";
-import Command from "../actions/commands";
+import counter from "../counter";
+import Command from "../../actions/commands";
 
 describe("reducers", () => {
   describe("counter", () => {

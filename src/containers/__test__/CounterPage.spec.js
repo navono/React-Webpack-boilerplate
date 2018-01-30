@@ -1,8 +1,8 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { mount } from "enzyme";
-import Counter from "./Counter";
-import configureStore from "../store";
+import Counter from "../Counter";
+import configureStore from "../../store";
 
 function setup(initialState) {
   const store = configureStore(initialState);
