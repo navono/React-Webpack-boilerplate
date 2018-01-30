@@ -8,4 +8,4 @@ A boilerplate project for `React`. Still continues Improvement.
 - [x] react-hot-loader
 - [x] redux
 - [ ] router
-- [ ] test
+- [x] test
