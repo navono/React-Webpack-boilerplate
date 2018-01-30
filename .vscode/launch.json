@@ -19,16 +19,23 @@
           "node_modules/**"
       ],
       "sourceMapPathOverrides": {
-          "webpack:///*": "${webRoot}/src/*"
+          "webpack:///*": "${webRoot}/src/*",
+          "webpack:///src/*": "${webRoot}/src/*",
       }
     },
     {
       "type": "chrome",
       "request": "attach",
       "name": "Attach app",
-      "port": 9229,
+      "port": 9222,
       "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}/dist"
+      "webRoot": "${workspaceFolder}",
+      "skipFiles": [
+          "node_modules/**"
+      ],
+      "sourceMapPathOverrides": {
+          "webpack:///*": "${webRoot}/src/*"
+      }
     },
     {
       "type": "node",

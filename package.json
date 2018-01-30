@@ -7,7 +7,8 @@
     "dev": "webpack-dev-server --config ./config/webpack.config.dev.js --progress --profile --colors",
     "build": "webpack --config ./config/webpack.config.prod.js --progress --profile --colors",
     "test": "cross-env NODE_ENV=production jest --setupFiles ./enzyme.config.js",
-    "precommit": "lint-staged"
+    "precommit": "yarn lint && lint-staged",
+    "lint": "eslint ./src/**"
   },
   "lint-staged": {
     "*.js": [
@@ -34,6 +35,12 @@
     "css-loader": "^0.28.9",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.16.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
     "husky": "^0.14.3",
@@ -71,5 +78,6 @@
     "testMatch": [
       "**/?(*.)(spec|test).js?(x)"
     ]
-  }
+  },
+  "dependencies": {}
 }
