@@ -9,6 +9,9 @@
       "request": "launch",
       "name": "Jest tests",
       "program": "${workspaceRoot}\\node_modules\\jest\\bin\\jest",
+      "env": {
+        "NODE_ENV": "production"
+      },
       "args": [
         "-i"
         "--setupFiles",

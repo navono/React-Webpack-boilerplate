@@ -18,7 +18,7 @@ function setup() {
     actions,
     buttons: component.find('.button'),
     p: component.find('#count')
-  }
+  };
 }
 
 describe('Counter component', () => {

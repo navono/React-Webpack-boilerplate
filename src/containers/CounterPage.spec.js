@@ -1,7 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { mount, shallow } from "enzyme";
-import App from "../components/App";
+import { mount } from "enzyme";
 import Counter from "./Counter";
 import configureStore from "../store";
 

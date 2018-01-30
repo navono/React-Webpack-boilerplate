@@ -1,5 +1,4 @@
 import counter from "./counter";
-// import { Increase, Decrease } from '../actions/index';
 import Command from "../actions/commands";
 
 describe("reducers", () => {
