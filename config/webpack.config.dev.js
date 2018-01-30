@@ -1,4 +1,3 @@
-const path = require("path");
 const webpack = require("webpack");
 const merge = require("webpack-merge");
 const commonConfig = require("./webpack.config.common");
@@ -18,11 +17,11 @@ module.exports = merge(commonConfig, {
     // 此路径下的打包文件可在浏览器中访问。
     // publicPath: '/dist/',
 
-    // compress: true,
+    compress: true,
     hot: true,
     port: PORT,
-    // open: true,
-    // inline: true,
+    open: process.env.HOT ? true : false,
+    inline: process.env.HOT ? true : false,
     historyApiFallback: true,
     stats: {
       colors: true,

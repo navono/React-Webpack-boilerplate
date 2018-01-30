@@ -9,7 +9,7 @@
 			"command": "yarn",
 			"isBackground": true,
 			"args": [
-				"dev"
+				"server"
 			],
 			"problemMatcher": [
 				{
