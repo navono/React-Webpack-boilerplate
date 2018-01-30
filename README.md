@@ -9,3 +9,4 @@ A boilerplate project for `React`. Still continues Improvement.
 - [x] redux
 - [ ] router
 - [x] test
+- [x] VS Code debug
