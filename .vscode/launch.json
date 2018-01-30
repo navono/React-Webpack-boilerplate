@@ -5,15 +5,41 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Debug app",
+      "type": "chrome",
+      "request": "launch",
+      "webRoot": "${workspaceRoot}",
+      "url": "http://localhost:3000", 
+      "userDataDir": "${workspaceRoot}/.vscode/chrome",
+      "sourceMaps": true,
+      "preLaunchTask": "development",
+      "smartStep": true,
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": [
+          "node_modules/**"
+      ],
+      "sourceMapPathOverrides": {
+          "webpack:///*": "${webRoot}/src/*"
+      }
+    },
+    {
+      "type": "chrome",
+      "request": "attach",
+      "name": "Attach app",
+      "port": 9229,
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/dist"
+    },
+    {
       "type": "node",
       "request": "launch",
-      "name": "Jest tests",
+      "name": "Jest",
       "program": "${workspaceRoot}\\node_modules\\jest\\bin\\jest",
       "env": {
         "NODE_ENV": "production"
       },
       "args": [
-        "-i"
+        "-i",
         "--setupFiles",
         "./enzyme.config.js",
       ],

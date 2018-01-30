@@ -8,6 +8,9 @@ const commonConfig = {
   output: {
     path: path.resolve(__dirname, "../dist"),
     filename: "bundle.js"
+    // 对于按需加载(on-demand-load)或加载外部资源(external resources)（如图片、文件等）来说，
+    // output.publicPath 是很重要的选项。如果指定了一个错误的值，则在加载这些资源时会收到 404 错误。
+    // publicPath: path.resolve(__dirname, "../dist", "/")
   },
 
   module: {
@@ -57,7 +60,8 @@ const commonConfig = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html"
+      template: "./index.html",
+      inject: "body"
     })
   ]
 
