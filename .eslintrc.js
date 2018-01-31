@@ -22,11 +22,13 @@ module.exports = {
   // 全局变量
   globals: {
     process: false,
+    window: false,
     module: false,
     require: false,
     __dirname: false
   },
   rules: {
-    indent: ["error", 2, { SwitchCase: 1 }]
+    indent: ["error", 2, { SwitchCase: 1 }],
+    "no-console": 1
   }
 };
