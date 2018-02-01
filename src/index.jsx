@@ -2,18 +2,10 @@ import React from 'react';
 import { render } from 'react-dom';
 import { configureStore, history } from './store';
 import { AppContainer } from 'react-hot-loader';
+import Root from './containers/Root';
 
-// import { Provider } from 'react-redux';
-// import { ConnectedRouter } from 'react-router-redux';
-
-// import Routes from './routes';
-
-import { Root } from './containers/Root';
 
 const store = configureStore();
-
-console.log(Root);
-
 render(
   <AppContainer>
     <Root store={store} history={history} />

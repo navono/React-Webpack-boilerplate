@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default class App extends React.Component {
   static propTypes = {
-    children: PropTypes.arrayOf(PropTypes.node)
+    children: PropTypes.object
   };
 
   render() {
