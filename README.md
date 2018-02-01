@@ -12,3 +12,8 @@ A boilerplate project for `React`. Still continues Improvement.
 <br>Install with `yarn add react-router-redux@next`
 - [x] test
 - [x] VS Code debug
+  > Before start Chrome, need add `debug` option:
+
+    >>chrome.exe --remote-debugging-port=9222
+  
+  > then open a new Tab, input `localhost:3000`, execute `Attach app` in VS Code Debug page.
