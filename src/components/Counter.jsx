@@ -12,10 +12,11 @@ export default class Counter extends React.Component {
     super(props);
   }
 
+  // 单引号：no-unescaped-entities
   render() {
     return (
       <div>
-        <p>Hello, World! I&rsquom counting...</p>
+        <p>{"Hello, World! I'm counting..."}</p>
         <p id='count'>{this.props.count}</p>
         <input
           className='button'
