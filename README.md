@@ -11,6 +11,7 @@ A boilerplate project for `React`. Still continues Improvement.
   > Note: With `react-router` v4.0+ (`react-router` contained in `react-router-dom`), `react-router-redux` must be `v5` above.
 <br>Install with `yarn add react-router-redux@next`
 - [x] test
+  > Coverage: yarn test -- --coverage
 - [x] VS Code debug
   > Before start Chrome, need add `debug` option (launched in debug mode):
 
