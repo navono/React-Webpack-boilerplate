@@ -4,8 +4,9 @@ import { configureStore, history } from './store';
 import { AppContainer } from 'react-hot-loader';
 import Root from './containers/Root';
 
+const initState = { Counter: { count: 10 } };
+const store = configureStore(initState);
 
-const store = configureStore();
 render(
   <AppContainer>
     <Root store={store} history={history} />
