@@ -6,15 +6,18 @@ A boilerplate project for `React`. Still continues Improvement.
 - [x] Webpack3
 - [x] webpack-dev-server
 - [x] react-hot-loader
-- [x] redux
-- [x] router
-  > Note: With `react-router` v4.0+ (`react-router` contained in `react-router-dom`), `react-router-redux` must be `v5` above.
-<br>Install with `yarn add react-router-redux@next`
-- [x] test
+
+- [ ] test
   > Coverage: yarn test -- --coverage
 - [x] VS Code debug
-  > Before start Chrome, need add `debug` option (launched in debug mode):
-
-    >>chrome.exe --remote-debugging-port=9222
+  <br>__`Launch`__
   
-  > then open a new Tab, input `localhost:3000`, execute `Attach app` in VS Code Debug page.
+  Start with `F5`
+
+  __`Attach`__
+  
+  Before start Chrome, need add `debug` option (launched in debug mode):
+
+    >chrome.exe --remote-debugging-port=9222
+  
+  then open a new Tab, input `localhost:3000`, execute `Attach app` in VS Code Debug page.
