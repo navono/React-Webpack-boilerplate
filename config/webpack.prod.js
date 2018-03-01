@@ -2,7 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const merge = require("webpack-merge");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const commonConfig = require("./webpack.config.common");
+const commonConfig = require("./webpack.common");
 
 module.exports = merge(commonConfig, {
   devtool: "cheap-module-source-map",

@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env HOT=1 webpack-dev-server --config ./config/webpack.config.dev.js --progress --profile --colors",
-    "server": "webpack-dev-server --config ./config/webpack.config.dev.js --progress --profile --colors",
-    "build": "webpack --config ./config/webpack.config.prod.js --progress --profile --colors",
+    "dev": "cross-env HOT=1 webpack-dev-server --config ./config/webpack.dev.js --progress --profile --colors",
+    "server": "webpack-dev-server --config ./config/webpack.dev.js --progress --profile --colors",
+    "build": "webpack --config ./config/webpack.prod.js --progress --profile --colors",
     "test": "cross-env NODE_ENV=production jest --setupFiles ./enzyme.config.js",
     "precommit": "yarn lint && lint-staged",
     "lint": "eslint ./src/**"
@@ -21,7 +21,6 @@
     "React",
     "boilerplate"
   ],
-  "author": "Qixing Ping",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
