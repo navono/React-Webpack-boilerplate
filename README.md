@@ -7,7 +7,7 @@ A boilerplate project for `React`. Still continues Improvement.
 - [x] webpack-dev-server
 - [x] react-hot-loader
 
-- [ ] test
+- [x] test
   > Coverage: yarn test -- --coverage
 - [x] VS Code debug
   <br>__`Launch`__
