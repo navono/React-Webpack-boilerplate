@@ -1,15 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 export default class Counter extends React.Component {
-  static propTypes = {
-    count: PropTypes.number.isRequired,
-    onIncrease: PropTypes.func.isRequired,
-    onDecrease: PropTypes.func.isRequired,
-  }
-
   constructor(props) {
     super(props);
+    this.state = {
+      count: 0
+    };
+
+    this.onIncrease = this.onIncrease.bind(this);
+    this.onDecrease = this.onDecrease.bind(this);
+  }
+
+  onIncrease(e) {
+    this.setState((prevState, props) => ({
+      count: prevState.count + 1
+    }))
+  }
+
+  onDecrease(e) {
+    this.setState((prevState, props) => ({
+      count: prevState.count - 1
+    }))
   }
 
   // 单引号：no-unescaped-entities
@@ -17,17 +28,17 @@ export default class Counter extends React.Component {
     return (
       <div>
         <p>{"Hello, World! I'm counting..."}</p>
-        <p id='count'>{this.props.count}</p>
+        <p id='count'>{this.state.count}</p>
         <input
           className='button'
           type='button'
           value='increament' 
-          onClick={this.props.onIncrease} />
+          onClick={this.onIncrease} />
         <input
           className='button'
           type='button'
           value='decrement'
-          onClick={this.props.onDecrease} />
+          onClick={this.onDecrease} />
       </div>
     );
   }
