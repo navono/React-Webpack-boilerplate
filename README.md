@@ -13,8 +13,15 @@ A boilerplate project for `React`. Still continues Improvement.
 - [x] test
   > Coverage: yarn test -- --coverage
 - [x] VS Code debug
-  > Before start Chrome, need add `debug` option (launched in debug mode):
-
-    >>chrome.exe --remote-debugging-port=9222
+  <br>__`Launch`__
   
-  > then open a new Tab, input `localhost:3000`, execute `Attach app` in VS Code Debug page.
+  Start with `F5`
+
+  __`Attach`__
+  
+  Before start Chrome, need add `debug` option (launched in debug mode):
+
+    >chrome.exe --remote-debugging-port=9222
+  
+  then open a new Tab, input `localhost:3000`, execute `Attach app` in VS Code Debug page.
+- [x] Add `simple-react` branch, this branch without `Redux` and `Router`
