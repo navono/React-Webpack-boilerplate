@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
-import App from './components';
+import React from "react";
+import ReactDOM from "react-dom";
+import { AppContainer } from "react-hot-loader";
+import App from "./components";
 
 ReactDOM.render(
   <AppContainer>
     <App />
   </AppContainer>,
-  document.getElementById('root'),
+  document.getElementById("root"),
 );
 
 if (module.hot) {
