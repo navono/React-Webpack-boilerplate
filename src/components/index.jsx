@@ -1,6 +1,6 @@
-import React from 'react';
-import Home from './Home';
-import Counter from './Counter';
+import React from "react";
+import Home from "./Home";
+import Counter from "./Counter";
 
 export default class App extends React.Component {
   render() {
@@ -9,6 +9,6 @@ export default class App extends React.Component {
         <Home />
         <Counter />
       </div>
-    )
+    );
   }
 }
