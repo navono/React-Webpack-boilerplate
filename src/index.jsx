@@ -1,30 +1,20 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { configureStore, history } from './store';
-import { AppContainer } from 'react-hot-loader';
-import Root from './containers/Root';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { configureStore } from "./store";
+import { AppContainer } from "react-hot-loader";
+import App from "./containers/App";
 
-const initState = { Counter: { count: 10 } };
-const store = configureStore(initState);
-
-render(
+const store = configureStore();
+ReactDOM.render(
   <AppContainer>
-    <Root store={store} history={history} />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </AppContainer>,
-  document.getElementById('root')
+  document.getElementById("root"),
 );
-
 
 if (module.hot) {
   module.hot.accept();
-
-  // module.hot.accept('./containers/Root', () => {
-  //   const NextRoot = require('./containers/Root').default;
-  //   render(
-  //     <AppContainer>
-  //       <NextRoot store={store} history={history} />
-  //     </AppContainer>,
-  //     document.getElementById('root')
-  //   );
-  // });
 }

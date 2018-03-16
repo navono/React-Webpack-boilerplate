@@ -1,15 +1,10 @@
-# react-boilerplate
-
-A boilerplate project for `React`. Still continues Improvement.
+# React样板工程1
 
 - [x] React
 - [x] Webpack3
 - [x] webpack-dev-server
 - [x] react-hot-loader
-- [x] redux
-- [x] router
-  > Note: With `react-router` v4.0+ (`react-router` contained in `react-router-dom`), `react-router-redux` must be `v5` above.
-<br>Install with `yarn add react-router-redux@next`
+- [x] Redux
 - [x] test
   > Coverage: yarn test -- --coverage
 - [x] VS Code debug
@@ -24,4 +19,3 @@ A boilerplate project for `React`. Still continues Improvement.
     >chrome.exe --remote-debugging-port=9222
   
   then open a new Tab, input `localhost:3000`, execute `Attach app` in VS Code Debug page.
-- [x] Add `simple-react` branch, this branch without `Redux` and `Router`

@@ -1,16 +1,13 @@
 import { createStore, applyMiddleware, compose } from "redux";
-import { routerMiddleware } from "react-router-redux";
-import thunk from "redux-thunk";
-import { createBrowserHistory } from "history";
+// import thunk from "redux-thunk";
 import { createLogger } from "redux-logger";
 import rootReducer from "../reducers";
 
-const middleware = [thunk];
+// const middleware = [thunk];
+const middleware = [];
 if (process.env.NODE_ENV !== "production") {
   middleware.push(createLogger());
 }
-const history = createBrowserHistory();
-middleware.push(routerMiddleware(history));
 
 const enhancers = [];
 
@@ -38,4 +35,4 @@ function configureStore(preLoadedState) {
   return store;
 }
 
-export { history, configureStore };
+export { configureStore };

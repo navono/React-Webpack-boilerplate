@@ -1,15 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import Home from "./Home";
+import Counter from "./Counter";
 
 export default class App extends React.Component {
-  static propTypes = {
-    children: PropTypes.object
-  };
-
   render() {
     return (
       <div>
-        {this.props.children}
+        <Home />
+        <Counter />
       </div>
     );
   }
