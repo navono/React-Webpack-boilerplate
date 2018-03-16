@@ -7,21 +7,21 @@ export default class Counter extends React.Component {
       count: 0,
     };
 
-    this.onIncrease = this.onIncrease.bind(this);
-    this.onDecrease = this.onDecrease.bind(this);
+    // this.onIncrease = this.onIncrease.bind(this);
+    // this.onDecrease = this.onDecrease.bind(this);
   }
 
-  onIncrease(e) {
-    this.setState((prevState, props) => ({
+  onIncrease = () => {
+    this.setState(prevState => ({
       count: prevState.count + 1,
     }));
-  }
+  };
 
-  onDecrease(e) {
-    this.setState((prevState, props) => ({
+  onDecrease = () => {
+    this.setState(prevState => ({
       count: prevState.count - 1,
     }));
-  }
+  };
 
   // 单引号：no-unescaped-entities
   render() {
