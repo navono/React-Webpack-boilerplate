@@ -16,9 +16,9 @@ const commonConfig = {
   module: {
     rules: [
       {
-        test: /\.jsx$/,
+        test: /\.js[x]?$/,
         use: ["babel-loader", "eslint-loader"],
-        exclude: /(node_modules)/
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
