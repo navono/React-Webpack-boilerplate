@@ -48,6 +48,7 @@
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.6.1",
     "history": "^4.7.2",
     "html-loader": "^0.5.5",
@@ -87,5 +88,9 @@
     "testMatch": [
       "**/?(*.)(spec|test).js?(x)"
     ]
+  },
+  "prettier": {
+    "Quotes": true,
+    "trailingComma": "all"
   }
 }

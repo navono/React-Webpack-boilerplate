@@ -6,12 +6,12 @@ export default (state, action) => {
     case Command.Increment:
       return {
         ...state,
-        count: state.count + 1
+        count: state.count + 1,
       };
     case Command.Decrement:
       return {
         ...state,
-        count: state.count - 1
+        count: state.count - 1,
       };
     default:
       return state || {};
