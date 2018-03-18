@@ -19,12 +19,12 @@ module.exports = merge(commonConfig, {
   output: {
     publicPath: "../dist/",
     filename: "[name].bundle.js",
-    libraryTarget: 'amd'
+    libraryTarget: "amd",
   },
 
   plugins: [
     new CleanWebpackPlugin(["dist"], {
-      root: path.resolve(__dirname, "../")
+      root: path.resolve(__dirname, "../"),
     }),
 
     // https://webpack.github.io/docs/list-of-plugins.html#occurrenceorderplugin
@@ -33,10 +33,10 @@ module.exports = merge(commonConfig, {
 
     // NODE_ENV should be production so that modules do not perform certain development checks
     new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("production")
-    })
+      "process.env.NODE_ENV": JSON.stringify("production"),
+    }),
 
     // 将 CSS 文件输出到指定的文件
     // new ExtractTextPlugin('style.css'),
-  ]
+  ],
 });
