@@ -4,7 +4,7 @@ import CounterReducers from "./counter";
 
 const rootReducer = combineReducers({
   router: routerReducer,
-  Counter: CounterReducers
+  Counter: CounterReducers,
 });
 
 export default rootReducer;

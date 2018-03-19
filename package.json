@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env HOT=1 webpack-dev-server --config ./config/webpack.config.dev.js --progress --profile --colors",
-    "server": "webpack-dev-server --config ./config/webpack.config.dev.js --progress --profile --colors",
-    "build": "webpack --config ./config/webpack.config.prod.js --progress --profile --colors",
+    "dev": "cross-env HOT=1 webpack-dev-server --config ./config/webpack.dev.js --progress --profile --colors",
+    "server": "webpack-dev-server --config ./config/webpack.dev.js --progress --profile --colors",
+    "build": "webpack --config ./config/webpack.prod.js --progress --profile --colors",
     "test": "cross-env NODE_ENV=production jest --setupFiles ./enzyme.config.js",
     "precommit": "yarn lint && lint-staged",
     "lint": "eslint ./src/**"
@@ -23,11 +23,19 @@
   ],
   "author": "Qixing Ping",
   "license": "MIT",
+  "dependencies": {
+    "antd": "^3.3.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.1.0",
     "babel-loader": "^7.1.1",
+    "babel-plugin-import": "^1.6.7",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
@@ -41,18 +49,20 @@
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.6.1",
     "history": "^4.7.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
     "husky": "^0.14.3",
     "jest": "^22.1.4",
+    "less": "^2.7.2",
+    "less-loader": "^4.1.0",
+    "less-vars-to-js": "^1.2.1",
     "lint-staged": "^4.1.3",
     "postcss-loader": "^2.0.6",
     "prettier": "^1.10.2",
     "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
     "react-hot-loader": "^3.1.3",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
@@ -83,5 +93,9 @@
       "**/?(*.)(spec|test).js?(x)"
     ]
   },
-  "dependencies": {}
+  "theme": "./theme.js",
+  "prettier": {
+    "Quotes": true,
+    "trailingComma": "all"
+  }
 }

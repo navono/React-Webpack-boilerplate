@@ -1,6 +1,6 @@
 const webpack = require("webpack");
 const merge = require("webpack-merge");
-const commonConfig = require("./webpack.config.common");
+const commonConfig = require("./webpack.common");
 
 const PORT = process.env.PORT || 3000;
 
@@ -26,8 +26,8 @@ module.exports = merge(commonConfig, {
     stats: {
       colors: true,
       chunks: false,
-      "errors-only": true
-    }
+      "errors-only": true,
+    },
   },
 
   entry: [
@@ -36,7 +36,7 @@ module.exports = merge(commonConfig, {
     // dev-server: 遇到错误会重新刷新浏览器
     // only-dev-server: 遇到错误不会重新刷新浏览器，React App推荐使用。因为不会重置状态
     "webpack/hot/only-dev-server",
-    "./index"
+    "./index",
   ],
 
   plugins: [
@@ -50,11 +50,11 @@ module.exports = merge(commonConfig, {
     // NODE_ENV should be production so that modules do not perform certain development checks
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("development"),
-      __DEV__: true
+      __DEV__: true,
     }),
 
     new webpack.LoaderOptionsPlugin({
-      debug: true
-    })
-  ]
+      debug: true,
+    }),
+  ],
 });

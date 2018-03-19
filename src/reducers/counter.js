@@ -4,9 +4,15 @@ import Command from "../actions/commands";
 export default (state, action) => {
   switch (action.type) {
     case Command.Increment:
-      return { count: state.count + 1 };
+      return {
+        ...state,
+        count: state.count + 1,
+      };
     case Command.Decrement:
-      return { count: state.count - 1 };
+      return {
+        ...state,
+        count: state.count - 1,
+      };
     default:
       return state || {};
   }
