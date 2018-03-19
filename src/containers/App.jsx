@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./App.css";
 
 export default class App extends React.Component {
   static propTypes = {
@@ -7,6 +8,6 @@ export default class App extends React.Component {
   };
 
   render() {
-    return <div>{this.props.children}</div>;
+    return <div className="app">{this.props.children}</div>;
   }
 }
