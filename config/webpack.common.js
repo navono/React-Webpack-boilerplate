@@ -1,8 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const fs = require("fs");
-
 const lessToJs = require("less-vars-to-js");
+
 const themeVariables = lessToJs(
   fs.readFileSync(path.join(__dirname, "../theme.less"), "utf8"),
 );

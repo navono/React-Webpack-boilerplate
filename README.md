@@ -2,6 +2,10 @@
 
 A boilerplate project for `React`. Still continues Improvement.
 
+## Note
+`AntD` UI库使用离线iconfont时，使用的`less`版本应该在 __`v3.x`__ 以下，建议使用`v2.7.2`。否则在`webpack`打包时会出错。详细见[issue](https://github.com/less/less.js/issues/3113)
+
+## Features
 - [x] React
 - [x] Webpack3
 - [x] webpack-dev-server
