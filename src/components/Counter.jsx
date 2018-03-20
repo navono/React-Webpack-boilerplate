@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "antd";
 
 export default class Counter extends React.Component {
   constructor(props) {
@@ -6,9 +7,6 @@ export default class Counter extends React.Component {
     this.state = {
       count: 0,
     };
-
-    // this.onIncrease = this.onIncrease.bind(this);
-    // this.onDecrease = this.onDecrease.bind(this);
   }
 
   onIncrease = () => {
@@ -23,24 +21,17 @@ export default class Counter extends React.Component {
     }));
   };
 
-  // 单引号：no-unescaped-entities
   render() {
     return (
       <div>
         <p>{"Hello, World! I'm counting..."}</p>
         <p id="count">{this.state.count}</p>
-        <input
-          className="button"
-          type="button"
-          value="increament"
-          onClick={this.onIncrease}
-        />
-        <input
-          className="button"
-          type="button"
-          value="decrement"
-          onClick={this.onDecrease}
-        />
+        <Button type="primary" onClick={this.onIncrease}>
+          increament
+        </Button>
+        <Button type="primary" onClick={this.onDecrease}>
+          decrement
+        </Button>
       </div>
     );
   }
