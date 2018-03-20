@@ -1,5 +1,15 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const fs = require("fs");
+const lessToJs = require("less-vars-to-js");
+
+const themeVariables = lessToJs(
+  fs.readFileSync(path.join(__dirname, "../theme.less"), "utf8"),
+);
+
+// lessToJs does not support @icon-url: "some-string", so we are manually adding it to the produced themeVariables js object here
+themeVariables["@icon-url"] = "'/public/iconfont/iconfont'";
 
 const commonConfig = {
   // absolute path for project root
@@ -22,16 +32,18 @@ const commonConfig = {
       },
       {
         test: /\.css$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              plugins: () => [require("autoprefixer")],
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: [
+            "css-loader",
+            {
+              loader: "postcss-loader",
+              options: {
+                plugins: () => [require("autoprefixer")],
+              },
             },
-          },
-        ],
+          ],
+        }),
       },
       {
         test: /\.scss/,
@@ -45,6 +57,19 @@ const commonConfig = {
             },
           },
           "sass-loader",
+        ],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "less-loader",
+            options: {
+              modifyVars: themeVariables,
+            },
+          },
         ],
       },
       {
